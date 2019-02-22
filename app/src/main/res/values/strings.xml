@@ -2,6 +2,7 @@
 
     <string name="app_name">The Application</string>
 
+    <string name="title_movie_list">Ghibli Movies</string>
     <string name="title_film_detail">Film Detail</string>
 
     <string name="text_producer">Producer</string>

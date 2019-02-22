@@ -15,14 +15,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:titleTextColor="@color/white"
-                app:title="@string/app_name"/>
+                app:title="@string/title_movie_list"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_movie"
+            android:id="@+id/rv_movie_list"
             tools:listitem="@layout/item_movie"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>

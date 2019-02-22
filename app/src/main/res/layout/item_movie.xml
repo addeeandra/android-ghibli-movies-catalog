@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="Castle in the Sky"/>
+            tools:text="Castle in the Sky"/>
 
     <TextView
             android:id="@+id/tv_movie_description"
@@ -27,37 +27,8 @@
             android:layout_height="wrap_content"
             android:maxLines="3"
             android:ellipsize="end"
-            android:text="The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world."/>
-
-    <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
-
-        <TableRow>
-            <TextView
-                    android:id="@+id/tv_movie_producer"
-                    android:text="@string/text_producer"
-                    android:textColor="@color/dark"/>
-            <TextView android:layout_marginStart="16dp" android:text="Hayao Miyazaki"/>
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                    android:id="@+id/tv_movie_director"
-                    android:text="@string/text_director"
-                    android:textColor="@color/dark"/>
-            <TextView android:layout_marginStart="16dp" android:text="Isao Takahata"/>
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                    android:id="@+id/tv_movie_release"
-                    android:text="@string/text_release_year"
-                    android:textColor="@color/dark"/>
-            <TextView android:layout_marginStart="16dp" android:text="1986"/>
-        </TableRow>
-
-    </TableLayout>
+            android:textSize="12sp"
+            android:textColor="@color/dark"
+            tools:text="The orphan Sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of Laputa. With the help of resourceful Pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. Sheeta and Pazu must outwit the evil Muska, who plans to use Laputa's science to make himself ruler of the world."/>
 
 </LinearLayout>

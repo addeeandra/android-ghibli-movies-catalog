@@ -10,7 +10,7 @@ import kotlin.coroutines.CoroutineContext
 
 abstract class CallbackRepository<T>(asyncModuleName: String = "") : CallbackDataSource(), CoroutineScope {
 
-    override val coroutineContext: CoroutineContext = Dispatchers.IO
+    override val coroutineContext: CoroutineContext = Dispatchers.Main
 
     private val mAsyncRepository by inject<AsyncRepository<T>>(asyncModuleName)
 

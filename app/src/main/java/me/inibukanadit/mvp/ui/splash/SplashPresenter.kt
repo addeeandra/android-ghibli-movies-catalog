@@ -10,7 +10,11 @@ class SplashPresenter(
     override val coroutineContext: CoroutineContext = Dispatchers.Main
 ) : SplashContract.Presenter {
 
-    private val mSplashDelay = 3000.toLong()
+    private val mSplashDelay = 1500.toLong()
+
+    init {
+        mView.setPresenter(this)
+    }
 
     override fun start() {
         launch {

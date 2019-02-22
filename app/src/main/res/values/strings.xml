@@ -1,3 +1,13 @@
 <resources>
+
     <string name="app_name">The Application</string>
+
+    <string name="title_film_detail">Film Detail</string>
+
+    <string name="text_producer">Producer</string>
+    <string name="text_director">Director</string>
+    <string name="text_release_year">Release Year</string>
+
+    <string name="desc_studio_ghibli_logo">Studio Ghibli Logo</string>
+
 </resources>

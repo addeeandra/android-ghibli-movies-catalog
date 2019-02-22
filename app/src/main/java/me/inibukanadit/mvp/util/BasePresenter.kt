@@ -1,3 +1,9 @@
 package me.inibukanadit.mvp.util
 
-interface BasePresenter
+import kotlinx.coroutines.CoroutineScope
+
+interface BasePresenter : CoroutineScope {
+
+    fun start()
+
+}

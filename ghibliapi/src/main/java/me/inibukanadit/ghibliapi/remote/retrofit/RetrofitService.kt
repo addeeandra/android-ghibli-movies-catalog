@@ -3,39 +3,47 @@ package me.inibukanadit.ghibliapi.remote.retrofit
 import kotlinx.coroutines.Deferred
 import me.inibukanadit.ghibliapi.remote.GhibliRemoteService
 import me.inibukanadit.ghibliapi.remote.response.*
-import retrofit2.http.GET
-import retrofit2.http.Path
 
-internal interface RetrofitService : GhibliRemoteService {
+internal class RetrofitService(private val mEndpoint: RetrofitEndpoint) : GhibliRemoteService {
 
-    @GET("films")
-    override fun getAllFilmsAsync(): Deferred<List<FilmData>>
+    override fun getAllFilmsAsync(): Deferred<List<FilmData>> {
+        return mEndpoint.getAllFilmsAsync()
+    }
 
-    @GET("films/{id}")
-    override fun getFilmDetailAsync(@Path("id") id: String): Deferred<FilmData>
+    override fun getFilmDetailAsync(id: String): Deferred<FilmData> {
+        return mEndpoint.getFilmDetailAsync(id)
+    }
 
-    @GET("people")
-    override fun getAllPeopleAsync(): Deferred<List<PeopleData>>
+    override fun getAllPeopleAsync(): Deferred<List<PeopleData>> {
+        return mEndpoint.getAllPeopleAsync()
+    }
 
-    @GET("people/{id}")
-    override fun getPeopleDetailAsync(@Path("id") id: String): Deferred<PeopleData>
+    override fun getPeopleDetailAsync(id: String): Deferred<PeopleData> {
+        return mEndpoint.getPeopleDetailAsync(id)
+    }
 
-    @GET("species")
-    override fun getAllSpeciesAsync(): Deferred<List<SpeciesData>>
+    override fun getAllSpeciesAsync(): Deferred<List<SpeciesData>> {
+        return mEndpoint.getAllSpeciesAsync()
+    }
 
-    @GET("species/{id}")
-    override fun getSpeciesDetailAsync(@Path("id") id: String): Deferred<SpeciesData>
+    override fun getSpeciesDetailAsync(id: String): Deferred<SpeciesData> {
+        return mEndpoint.getSpeciesDetailAsync(id)
+    }
 
-    @GET("vehicles")
-    override fun getAllVehiclesAsync(): Deferred<List<VehicleData>>
+    override fun getAllVehiclesAsync(): Deferred<List<VehicleData>> {
+        return mEndpoint.getAllVehiclesAsync()
+    }
 
-    @GET("vehicles/{id}")
-    override fun getVehicleDetailAsync(@Path("id") id: String): Deferred<VehicleData>
+    override fun getVehicleDetailAsync(id: String): Deferred<VehicleData> {
+        return mEndpoint.getVehicleDetailAsync(id)
+    }
 
-    @GET("locations")
-    override fun getAllLocationsAsync(): Deferred<List<LocationData>>
+    override fun getAllLocationsAsync(): Deferred<List<LocationData>> {
+        return mEndpoint.getAllLocationsAsync()
+    }
 
-    @GET("locations/{id}")
-    override fun getLocationDetailAsync(@Path("id") id: String): Deferred<LocationData>
+    override fun getLocationDetailAsync(id: String): Deferred<LocationData> {
+        return mEndpoint.getLocationDetailAsync(id)
+    }
 
 }

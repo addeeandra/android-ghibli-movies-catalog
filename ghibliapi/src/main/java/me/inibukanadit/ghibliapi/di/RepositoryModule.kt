@@ -7,16 +7,16 @@ import org.koin.dsl.module.module
 
 val repositoryModule = module {
 
-    single { FilmAsyncRepository() as AsyncRepository<FilmData> }
-    single { LocationAsyncRepository() as AsyncRepository<LocationData> }
-    single { PeopleAsyncRepository() as AsyncRepository<PeopleData> }
-    single { SpeciesAsyncRepository() as AsyncRepository<SpeciesData> }
-    single { VehicleAsyncRepository() as AsyncRepository<VehicleData> }
+    single<AsyncRepository<FilmData>>("asyncRepoFilm") { FilmAsyncRepository() }
+    single<AsyncRepository<LocationData>>("asyncRepoLocation") { LocationAsyncRepository() }
+    single<AsyncRepository<PeopleData>>("asyncRepoPeople") { PeopleAsyncRepository() }
+    single<AsyncRepository<SpeciesData>>("asyncRepoSpecies") { SpeciesAsyncRepository() }
+    single<AsyncRepository<VehicleData>>("asyncRepoVehicle") { VehicleAsyncRepository() }
 
-    single { FilmCallbackRepository() as CallbackRepository<FilmData> }
-    single { LocationCallbackRepository() as CallbackRepository<LocationData> }
-    single { PeopleCallbackRepository() as CallbackRepository<PeopleData> }
-    single { SpeciesCallbackRepository() as CallbackRepository<SpeciesData> }
-    single { VehicleCallbackRepository() as CallbackRepository<VehicleData> }
+    single<CallbackRepository<FilmData>>("callbackRepoFilm") { FilmCallbackRepository() }
+    single<CallbackRepository<LocationData>>("callbackRepoLocation") { LocationCallbackRepository() }
+    single<CallbackRepository<PeopleData>>("callbackRepoPeople") { PeopleCallbackRepository() }
+    single<CallbackRepository<SpeciesData>>("callbackRepoSpecies") { SpeciesCallbackRepository() }
+    single<CallbackRepository<VehicleData>>("callbackRepoVehicle") { VehicleCallbackRepository() }
 
 }

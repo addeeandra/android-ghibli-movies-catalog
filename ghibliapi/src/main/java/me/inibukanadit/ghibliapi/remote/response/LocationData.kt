@@ -1,9 +1,7 @@
 package me.inibukanadit.ghibliapi.remote.response
 
-import javax.annotation.Generated
 import com.google.gson.annotations.SerializedName
 
-@Generated("com.robohorse.robopojogenerator")
 data class LocationData(
 
 	@field:SerializedName("films")

@@ -37,7 +37,7 @@ internal class RetrofitProvider : GhibliRemoteProvider {
             .setLevel(HttpLoggingInterceptor.Level.BODY)
 
     override fun create(ctx: Context?) =
-        ctx?.let { builder(it).create(RetrofitService::class.java) }
+        ctx?.let { RetrofitService(builder(it).create(RetrofitEndpoint::class.java)) }
 
     private fun builder(ctx: Context) =
         Retrofit
